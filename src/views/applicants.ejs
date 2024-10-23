@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicants</title>
+    <!-- Add Bootstrap CSS for styling -->
+<body>
+
+    <h1>Applicants</h1>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Resume</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% applications.forEach((applicant, index) => { %> <!-- Loop through applications array -->
+            <tr>
+              <th scope="row"><%= index + 1 %></th> <!-- Serial number -->
+              <td><%= applicant.name %></td> <!-- Applicant's name -->
+              <td><%= applicant.email %></td> <!-- Applicant's email -->
+              <td><%= applicant.contact %></td> <!-- Applicant's contact -->
+              <td>
+                <a href="/resumes/<%= applicant.resumeFilename %>" target="_blank" class="btn btn-primary">View Resume</a>
+
+              </td> <!-- Button to view resume -->
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+   
+</body>
+</html>

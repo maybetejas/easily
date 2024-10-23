@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .main {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .hero img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            h1, h2, h3 {
+                padding: 10px 0px 10px 0px;
+            }
+
+            h2 {
+                opacity: 0;
+                transform: translateX(-100%);
+                animation: slide-in 1s forwards;
+            }
+
+            @keyframes slide-in {
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="home">
+                <h1>A comprehensive platform for reliable</h1>
+                <h2>Job opportunities and internships.</h2>
+                <h3>Get Discovered. Get Hired</h3>
+                <div style="padding-top: 10px;">
+                    <a class="btn btn-primary" href="/jobs">I'm a job seeker</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">I'm a recruiter</button>
+                </div>
+            </div>
+            <div class="hero">
+                <img src="/images/hero.png" alt="some">
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Register user</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/register" method="post">
+                
+                        <div class="mb-3">
+                          <label for="john doe" class="form-label">Name </label>
+                          <input name="name" type="text" class="form-control"  aria-describedby="name" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email </label>
+                          <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Password </label>
+                          <input name="password" type="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        
+        <script src="" async defer></script>
+    </body>
+</html>

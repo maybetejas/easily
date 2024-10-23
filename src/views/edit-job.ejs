@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Job</title>
+</head>
+<body>
+    <form action="/editjob/<%= job.id %>" method="post">
+        <div class="mb-3">
+            <label for="company" class="form-label">Company name</label>
+            <input name="company" type="text" class="form-control" id="company" value="<%= job.company %>" required>
+        </div>
+        <div class="mb-3">
+            <label for="role" class="form-label">Role</label>
+            <input name="role" type="text" class="form-control" id="role" value="<%= job.role %>" required>
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Description</label>
+            <textarea name="desc" class="form-control" id="desc" rows="3"><%= job.desc %></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input name="location" type="text" class="form-control" id="location" value="<%= job.location %>" required>
+        </div>
+        <div class="mb-3">
+            <label for="pay" class="form-label">Pay</label>
+            <input name="pay" type="text" class="form-control" id="pay" value="<%= job.pay %>" required>
+        </div>
+        <div class="mb-3">
+            <label for="applyDate" class="form-label">Apply date</label>
+            <input name="applyDate" type="date" class="form-control" id="applyDate" value="<%= job.applyDate %>" required>
+        </div>
+        <div class="mb-3">
+            <label for="openings" class="form-label">Number of openings</label>
+            <input name="openings" type="text" class="form-control" id="openings" value="<%= job.openings %>" required>
+        </div>
+        <div class="mb-3">
+            <label for="skills" class="form-label">Add skills separated by commas (,)</label>
+            <textarea name="skills" class="form-control" id="skills" rows="3"><%= job.skills.join(', ') %></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

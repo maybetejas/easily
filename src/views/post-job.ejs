@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/editjob" method="post">
+                
+        <div class="mb-3">
+          <label for="john doe" class="form-label">Company name </label>
+          <input name="company" type="text" class="form-control"  aria-describedby="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Role </label>
+          <input name="role" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+        </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea name="desc" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Location </label>
+            <input name="location" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Pay </label>
+            <input name="pay" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Apply date </label>
+            <input name="applyDate" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Number of openings </label>
+            <input name="openings" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Add skills seperated by commas (,)</label>
+            <textarea name="skills" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</body>
+</html>
